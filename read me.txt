@@ -1,0 +1,67 @@
+Descriere generală
+
+Acest proiect este o aplicație web construită folosind Flask, care oferă funcționalități de mesagerie în timp real utilizând tehnica de long polling. Utilizatorii autentificați pot trimite și primi mesaje în timp real, iar un panou de administrare permite gestionarea utilizatorilor existenți.
+
+Funcționalitățile principale implementate
+
+Mesagerie în timp real: Utilizatorii pot trimite și primi mesaje în cadrul unei interfețe interactive.
+
+Autentificare: Utilizatorii trebuie să se autentifice pentru a accesa aplicația.
+
+Gestionare utilizatori: Administrarea utilizatorilor prin opțiuni de ștergere și modificare a numelui de utilizator.
+
+Long Polling: Actualizări în timp real ale mesajelor utilizând long polling pentru a evita reîmprospătarea paginii.
+
+Instrucțiuni pentru instalare, configurare și utilizare
+
+Cerințe preliminare
+
+Python 3.7+
+
+Flask și extensiile necesare (specificate în requirements.txt)
+
+Baza de date SQLite (configurată implicit)
+
+Funcționalități și tehnologii utilizate
+
+Backend: Flask, Flask-Login, SQLAlchemy.
+
+Frontend: HTML, CSS, JavaScript.
+
+Bază de date: SQLite.
+
+Comunicare client-server: Long polling prin Fetch API.
+
+Documentație API
+
+Endpointuri disponibile
+
+/home:
+
+Metode acceptate: GET, POST
+
+Funcționalitate: Afișează sau permite trimiterea de mesaje.
+
+/poll:
+
+Metode acceptate: GET
+
+Funcționalitate: Returnează mesaje noi pe baza timestamp-ului ultimului mesaj cunoscut.
+
+/admin:
+
+Metode acceptate: GET, POST
+
+Funcționalitate: Permite vizualizarea și gestionarea utilizatorilor.
+
+/delete_user:
+
+Metode acceptate: POST
+
+Funcționalitate: Șterge un utilizator specificat prin nume.
+
+/change_user:
+
+Metode acceptate: POST
+
+Funcționalitate: Modifică numele unui utilizator specificat.
