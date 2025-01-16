@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://fonts.google.com/specimen/Inter">
+        <link rel="stylesheet" href="https://fonts.google.com/specimen/Khand">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/Sign Up.css')}}">
+<title>Sign In</title>
+<meta charset="UTF-8">
+    </head>
+    <body>
+<main>
+    <div class="header bounce-in-top3">
+        <!-- Header Sign UP-->
+        <h1 class="center">Authentication</h1>
+    </div>
+    
+        <!-- Username, pass , pass inputs-->
+        <div class="bounce-in-top2">
+            <form method="POST">
+    <div class="input center">
+        <input type="text" placeholder="Username" name="username" required >
+        </div>
+        <div class="input center">
+        <input type="password" placeholder="Password" name="password" required >
+        </div>
+        <a href="/signup"><p class="culoare">Don't have an account? Create one.</p></a>
+        <div class="input  divider2">
+        
+        <input type="submit" value="Log In">
+    </div>
+</div>
+</form>
+   
+
+    <div class="center">
+        <h1 class="bounce-in-top1 inchidere" id="footer"> The most secured chat system...</h1>
+      </div>
+</main>
+
+    </body>
+ </html>

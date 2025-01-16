@@ -1,0 +1,12 @@
+
+document.addEventListener('DOMContentLoaded', function(){
+
+
+var inaltime=document.body.scrollHeight;
+var element = document.querySelector('.container');
+var element2 = document.querySelector('.chatcontainer');
+element.style.height=inaltime + 'px';
+element2.style.height=inaltime + 'px';
+
+
+});

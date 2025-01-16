@@ -1,0 +1,47 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(157, 157, 157);
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.tabela{
+    
+    border-collapse: collapse;
+    color:green;
+}
+h1{
+   
+    text-align: center;
+}
+
+form{
+    display:block;
+}
+input{
+    display: block;
+}
+    input[type="text"]{
+        border:none;
+        border-radius:15px;
+        margin:15px;
+        padding: 5px;;
+    }
+::placeholder{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+input[type="submit"]{
+    border:none;
+    background-color: black;
+    color: green;
+    border-radius: 25px;
+    padding:10px;
+    font-weight: bold;
+    font-family:cursive;
+}

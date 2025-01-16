@@ -1,0 +1,131 @@
+body{
+    margin:0;
+}
+main{
+    height: 100vh;
+    margin:0;
+    display:flex;
+}
+
+
+
+
+.container{
+    margin:0;
+background-color:#4f4f4f;
+color:green;
+width:30%;
+height:100vh;
+
+
+}
+
+.header{
+   
+    text-align:center;
+    color:green;
+    font-family: math;
+    font-size: 23px;
+}
+
+.logoutbutton{
+position:fixed;
+bottom:20px;
+width:30%;
+text-align:center;
+text-decoration:none;
+font-family:arial;
+font-size:40px;
+
+}
+.chatcontainer{
+    height: 100vh;
+    width: 70%;
+    background-color: rgb(146, 146, 146);
+}
+
+.culoare{
+    color:rgb(156, 156, 156);
+}
+
+.textcontainer{
+    background-color:black;
+    position:fixed;
+    bottom:0;
+width:70%;
+margin:0;
+    
+}
+input{
+    width:90%;
+    margin:0;
+    height:35px;
+    border:none;
+    background-color:black;
+    display:inline-block;
+    color:green;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+button{
+    width:8%;
+    margin:0;
+    height:35px;
+    border:none;
+    background-color:black;
+    display: inline-block;
+    color:green;
+    font-family: Arial, Helvetica, sans-serif;
+}
+::placeholder{
+    color:green;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.messagebox{
+    
+  margin:10px;
+  border-radius:25px;
+   background-color: white;
+   
+}
+.dreapta{
+    align-self: flex-end;
+}
+.stanga{
+    align-self: flex-start;
+}
+.chatbox{
+    display:flex;
+    flex-direction: column;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.text{
+    text-align:center;
+margin:0;
+margin-top:5px;
+margin-bottom:3px;
+padding-left:17px;
+padding-right:17px;
+font-size: 15px;
+
+}
+.username{
+    font-size:10px;
+margin:0;
+display: inline;
+text-align:left;
+padding:17px;
+font-family: cursive;
+font-style:italic;
+}
+.date{
+margin:0;
+display: inline;
+text-align:right;
+font-size:10px;
+padding:17px;
+font-family: cursive;
+font-style:italic;
+}
+

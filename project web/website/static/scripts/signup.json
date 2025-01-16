@@ -1,0 +1,44 @@
+
+function verificare() {
+       
+let parola1=document.getElementById('pas1');
+let parola2=document.getElementById('pas2');
+let aux1=parola1.value;
+let aux2=parola2.value;
+if(!(aux1==aux2)){
+        
+        localStorage.setItem('jos', 'True');
+        let jos= localStorage.getItem('jos');
+        if (jos== 'true'){
+        let demutat=document.getElementById('buton');
+        demutat.classList.add('mutarejos');
+        localStorage.setItem('jos', 'False');
+        
+} else {
+        let demutat2=document.getElementById('buton');
+        demutat2.classList.add('mutaresus');
+        localStorage.setItem('jos', 'True');
+        
+}
+        let auxiliar=document.getElementById('footer');
+        auxiliar.innerText="Oops...Passwords are not matchy!";
+        event.preventDefault();
+ }
+
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+

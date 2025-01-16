@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://fonts.google.com/specimen/Inter">
+        <link rel="stylesheet" href="https://fonts.google.com/specimen/Khand">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/Sign Up.css')}}">
+        <script src="{{ url_for('static', filename='scripts/signup.json')}}"></script>
+<title>Sign Up</title>
+<meta charset="UTF-8">
+    </head>
+    <body>
+<main>
+    <div class="header">
+        <!-- Header Sign UP-->
+        <h1 class="center bounce-in-top3">Registration</h1>
+    </div>
+    <div class="bounce-in-top2">
+        <!-- Username, pass , pass inputs-->
+        <form onsubmit="return verificare()" method="POST"> 
+     <div class="input center">
+    
+        <input type="text" placeholder="Please enter an username" name="username" required >
+        </div>
+        <div class="input center">
+            <input type="email" placeholder="Please enter an email address" name="email" required >
+        </div>
+        <div class="input center">
+        <input type="password" placeholder="Please enter a password" name="pass" required id="pas1">
+        </div>
+        <div class="input center divider">
+        <input type="password" placeholder="Please enter again the password" name="passrep" required id="pas2">
+        </div>
+        <a href="/login"><p class="culoare">Already have an account? Let's log in.</p></a>
+         <div  class="center">
+        <input type="submit" value="Sign Up" id="buton">
+         </div>
+    </div>
+   <div class="center">
+     <h1 class="bounce-in-top1 inchidere" id="footer"> Welcome to ChatZ</h1>
+   </div>
+</main>
+
+    </body>
+ </html>

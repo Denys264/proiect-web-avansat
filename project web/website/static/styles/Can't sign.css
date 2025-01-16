@@ -1,0 +1,72 @@
+body{
+   
+        background-image:url('C:/Users/Denis/Desktop/FACULTATE/Homework 1/images/background.jpg');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        margin:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color:white;
+    
+}
+main{
+    text-align:center;
+    margin-top:-110px;
+}
+h1{
+   font-family:arial;
+font-weight:60px;
+font-size:75px;
+
+}
+h2{
+    font-family:arial;
+    font-weight:60px;
+    font-size:30px;
+   margin-top:-20px;
+    margin-bottom:100px;
+
+}
+.square{
+    background-color:white;
+    color:rgb(193, 190, 190);
+    height:300px;
+    width:250px;
+    border-radius:25px;
+    display:inline;
+    padding:0 10PX;
+    
+}
+.flex{
+    display:flex;
+
+justify-content:center;
+margin-left:40px;
+margin-right:40px;
+margin-top:0;
+
+    
+}
+img{
+    width:140px;
+    height:140px;
+    
+}
+b{
+  
+    text-align:justify;
+    font-family:arial;
+    
+    
+}
+figcaption{
+    font-size:20px;
+    font-weight:120px;
+    font-family:arial;
+    width:210px;
+    color:rgb(155, 152, 152);
+    
+}

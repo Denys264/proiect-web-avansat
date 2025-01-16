@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+    <title>Home</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="header">
+                <h1>Hello {{ user.username }}</h1>
+            </div>
+            <div class="logoutbutton">
+                <a href="/logout" style="text-decoration:none;" class="culoare">Log out</a>
+            </div>    
+        </div> 
+        <div class="chatcontainer">
+            <div class="chatbox" id="messages">
+                {% for mesaj in mesaje %}
+                    {% if user.username == mesaj.user.username %}
+                        <div class="messagebox dreapta">
+                            <p class="text">{{ mesaj.text }}</p>
+                            <p class="username">by {{ mesaj.user.username }}</p>
+                            <p class="date">{{ mesaj.date_created }}</p>
+                        </div>
+                    {% else %}
+                        <div class="messagebox stanga">
+                            <p class="text">{{ mesaj.text }}</p>
+                            <p class="username">by {{ mesaj.user.username }}</p>
+                            <p class="date">{{ mesaj.date_created }}</p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="textcontainer">
+                <form method="POST">
+                    <input type="text" name="message" placeholder="Type a message...">
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let lastMessageTime = 0;
+
+        async function pollMessages() {
+            try {
+                const response = await fetch(`/poll?last_message_time=${lastMessageTime}`);
+                if (response.status === 200) {
+                    const data = await response.json();
+                    lastMessageTime = data.timestamp;
+
+                    const messagesContainer = document.getElementById("messages");
+                    const newMessage = document.createElement("div");
+                    newMessage.classList.add("messagebox", "stanga");
+                    newMessage.innerHTML = `
+                        <p class="text">${data.message}</p>
+                        <p class="username">by ${data.author}</p>
+                        <p class="date">${new Date(data.timestamp * 1000).toLocaleString()}</p>
+                    `;
+                    messagesContainer.appendChild(newMessage);
+                }
+            } catch (error) {
+                console.error("Error polling messages:", error);
+            } finally {
+                setTimeout(pollMessages, 1000);
+            }
+        }
+
+        pollMessages();
+    </script>
+</body>
+</html>

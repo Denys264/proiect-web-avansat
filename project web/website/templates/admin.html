@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/admin.css')}}">
+<title>Admin Panel</title>
+<meta charset="UTF-8">
+    </head>
+    <body>
+<main>
+<h1> Admin panel</h1>
+
+<table border="1" class="tabela">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Username</th>
+            
+            <th>Date Created</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.username }}</td>
+                
+                <td>{{ user.date_created}}</td>
+                
+            </tr>
+        {% endfor %}
+    </tbody>
+
+   
+
+</table>
+<br>
+<br>
+<br>
+<h3>Wanna delete an account?</h3>
+ <form method="POST" action="{{ url_for('views.delete_user') }}">
+        <label for="username">
+            Type username:
+            <input type="text" name="username" placeholder="Username">
+            <input type="Submit" value="Delete Account">
+        </label>
+    </form>
+<h3>Wanna change the username?</h3>
+<form method="POST" action="{{ url_for('views.change_user') }}">
+    <label >
+        Type username:
+        <input type="text" name="usernamechange" placeholder="Username">
+        <input type="text" name="newusername" placeholder="New username">
+        <input type="Submit" value="Change Username">
+    </label>
+</form>
+
+</main>
+    </body>
+    </html>
